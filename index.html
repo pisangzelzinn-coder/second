@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GiftElegance Boutique</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Raleway&display=swap%22 rel="stylesheet">
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+ 
+    body {
+        font-family: 'Raleway', sans-serif;
+        background-color: #FFFFF0;
+        color: #4B3621;
+        overflow-x: hidden;
+    }
+ 
+    /* Navbar */
+    nav {
+        background-color: #DCAE96;
+        padding: 15px 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        transition: background-color 0.3s;
+    }
+ 
+    nav:hover {
+        background-color: #E6BFA6;
+    }
+ 
+    nav .logo {
+        font-family: 'Playfair Display', serif;
+        font-size: 28px;
+        font-weight: 600;
+        color: #FFFFF0;
+    }
+ 
+    nav ul {
+        list-style: none;
+        display: flex;
+        gap: 25px;
+    }
+ 
+    nav ul li a {
+        text-decoration: none;
+        color: #FFFFF0;
+        font-weight: bold;
+        transition: 0.3s;
+    }
+ 
+    nav ul li a:hover {
+        color: #D4AF37;
+        transform: scale(1.15);
+    }
+ 
+    /* Hero Section */
+    .hero {
+        text-align: center;
+        padding: 100px 20px;
+        background: linear-gradient(135deg, #FFF5E1, #DCAE96);
+        background-size: 400% 400%;
+        color: #915F6D;
+        border-bottom-left-radius: 50% 10%;
+        border-bottom-right-radius: 50% 10%;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        animation: gradientShift 15s ease infinite;
+    }
+ 
+    @keyframes gradientShift {
+        0%{background-position:0% 50%}
+        50%{background-position:100% 50%}
+        100%{background-position:0% 50%}
+    }
+ 
+    .hero h1 {
+        font-family: 'Playfair Display', serif;
+        font-size: 50px;
+        margin-bottom: 20px;
+        text-shadow: 2px 2px 5px rgba(0,0,0,0.15);
+    }
+ 
+    .hero p {
+        font-size: 22px;
+        color: #4B3621;
+    }
+ 
+    /* Produk Section */
+    .products {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 40px;
+        padding: 60px 50px;
+    }
+ 
+    .product-card {
+        background-color: #FFFFF0;
+        border-radius: 15px;
+        text-align: center;
+        padding: 20px;
+        box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+        transition: transform 0.5s, box-shadow 0.5s, opacity 0.6s;
+        border: 2px solid #DCAE96;
+        opacity: 0;
+        transform: translateY(50px) scale(0.95);
+        animation: floatCard 4s ease-in-out infinite;
+    }
+ 
+    @keyframes floatCard {
+        0%, 100% { transform: translateY(0px) scale(1);}
+        50% { transform: translateY(-8px) scale(1.02);}
+    }
+ 
+    .product-card.visible {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+ 
+    .product-card:hover {
+        transform: translateY(-20px) scale(1.08);
+        box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+    }
+ 
+    .product-card img {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+        border-radius: 12px;
+        margin-bottom: 15px;
+        transition: transform 0.5s;
+    }
+ 
+    .product-card:hover img {
+        transform: scale(1.07);
+    }
+ 
+    .product-card h3 {
+        color: #915F6D;
+        margin-bottom: 10px;
+        font-family: 'Playfair Display', serif;
+    }
+ 
+    .product-card p {
+        color: #4B3621;
+        margin-bottom: 15px;
+        font-weight: bold;
+    }
+ 
+    .product-card button {
+        background: linear-gradient(45deg, #D4AF37, #E6C273);
+        border: none;
+        padding: 12px 25px;
+        color: #FFFFF0;
+        font-weight: bold;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: all 0.4s;
+    }
+ 
+    .product-card button:hover {
+        background: linear-gradient(45deg, #915F6D, #DCAE96);
+        transform: scale(1.12);
+        box-shadow: 0 10px 25px rgba(0,0,0,0.35);
+    }
+ 
+    /* Footer */
+    footer {
+        text-align: center;
+        padding: 30px;
+        background-color: #DCAE96;
+        color: #FFFFF0;
+        font-weight: bold;
+        margin-top: 40px;
+    }
+ 
+</style>
+</head>
+<body>
+ 
+<nav>
+<div class="logo">GiftElegance</div>
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="#">Produk</a></li>
+<li><a href="#">Tentang</a></li>
+<li><a href="#">Kontak</a></li>
+</ul>
+</nav>
+ 
+<section class="hero">
+<h1>Beauty in every surprise</h1>
+<p>For the one who deserves to be pampered</p>
+</section>
+ 
+<section class="products">
+<div class="product-card">
+<img src="https://i.pinimg.com/736x/0d/fb/b2/0dfbb25163d1c043c2cadeb13592b271.jpg" alt="Produk 1">
+<h3>YSL Perfume</h3>
+<p>Rp3.000.000</p>
+<button>Beli Sekarang</button>
+</div>
+<div class="product-card">
+<img src="https://i.pinimg.com/736x/e0/5c/cf/e05ccf921d0e50488e3aa6d59efbc545.jpg" alt="Produk 2">
+<h3>Jewellery</h3>
+<p>Rp25.000.000</p>
+<button>Beli Sekarang</button>
+</div>
+<div class="product-card">
+<img src="https://i.pinimg.com/736x/09/54/6b/09546bc780c5f42531267b31c50f5882.jpg" alt="Produk 3">
+<h3>Gold Chocolate By DELAFEE</h3>
+<p>Rp8.000.000</p>
+<button>Beli Sekarang</button>
+</div>
+<div class="product-card">
+<img src="https://i.pinimg.com/736x/3f/a9/3e/3fa93e04b74ed83f274a9c7712d0055e.jpg" alt="Produk 4">
+<h3>Luxury Bouquet</h3>
+<p>Rp5.000.000</p>
+<button>Beli Sekarang</button>
+</div>
+</section>
+ 
+<footer>
+&copy; 2025 GiftElegance. All Rights Reserved.
+</footer>
+ 
+<script>
+    // Animasi fade-in saat scroll
+    const cards = document.querySelectorAll('.product-card');
+ 
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if(entry.isIntersecting){
+                entry.target.classList.add('visible');
+            }
+        });
+    }, { threshold: 0.2 });
+ 
+    cards.forEach(card => observer.observe(card));
+</script>
+ 
+</body>
+</html>
